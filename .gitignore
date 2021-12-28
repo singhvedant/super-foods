@@ -77,6 +77,3 @@ typings/
 
 #vscode workspace-settings
 .vscode/
-
-#model tests
-model/
