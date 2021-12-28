@@ -22,5 +22,7 @@
         "url": "https://github.com/singhvedant/super-foods/issues"
     },
     "homepage": "https://github.com/singhvedant/super-foods#readme",
-    "dependencies": {}
+    "dependencies": {
+        "express": "^4.17.2"
+    }
 }

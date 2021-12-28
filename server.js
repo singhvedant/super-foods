@@ -1,9 +1,17 @@
-const http = require('http')
-const fs = require('fs')
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
-    fs.createReadStream('index.html').pipe(res)
+// Creating express object
+const app = express();
+
+// Defining port number
+const PORT = 3000;
+
+// Function to serve all static files
+// inside public directory.
+app.use(express.static('public'));
+app.use('/images', express.static('images'));
+
+// Server setup
+app.listen(PORT, () => {
+    console.log(`Running server on PORT ${PORT}...`);
 })
-
-server.listen(process.env.PORT || 3000)
