@@ -21,8 +21,7 @@
   "bugs": {
     "url": "https://github.com/singhvedant/super-foods/issues"
   },
-  "homepage": "https://github.com/singhvedant/super-foods#readme",
+  "homepage": "http://www.not-so-super.herokuapp.com",
   "dependencies": {
-    "bootstrap": "^5.1.3"
   }
 }
