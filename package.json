@@ -1,27 +1,28 @@
 {
-  "name": "super-foods",
-  "version": "1.0.0",
-  "description": "Not So Super",
-  "main": "server.js",
-  "scripts": {
-    "test": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/singhvedant/super-foods.git"
-  },
-  "keywords": [
-    "super",
-    "food",
-    "super-food",
-    "not-so-super-food"
-  ],
-  "author": "Vedant Singh, Apoorva Singh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/singhvedant/super-foods/issues"
-  },
-  "homepage": "http://www.not-so-super.herokuapp.com",
-  "dependencies": {
-  }
+    "name": "super-foods",
+    "version": "1.0.0",
+    "description": "Not So Super",
+    "main": "server.js",
+    "scripts": {
+        "test": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/singhvedant/super-foods.git"
+    },
+    "keywords": [
+        "super",
+        "food",
+        "super-food",
+        "not-so-super-food"
+    ],
+    "author": "Vedant Singh, Apoorva Singh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/singhvedant/super-foods/issues"
+    },
+    "homepage": "https://github.com/singhvedant/super-foods#readme",
+    "dependencies": {
+        "bootstrap": "^5.1.3"
+    }
 }
