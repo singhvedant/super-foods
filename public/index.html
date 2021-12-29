@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header class="mb-5">
+    <header class="mb-5" id="navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +24,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -48,13 +49,14 @@
             </div>
             <div class="row">
                 <a class="navbar-brand" href="#">
-                    <img src="images/icon.jpg" width="90" height="60" class="d-inline-block align-top" alt="">
+                    <h3 class="h3">
+                        <img src="images/icon.jpg" width="90" height="60" class="d-inline-block align-top" alt=""></h3>
                 </a>
             </div>
         </nav>
     </header>
 
-    <section class="container" margin-top=10>
+    <section class="container" margin-top=10 id="featured">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -105,7 +107,7 @@
     </section>
 
 
-    <section class="container">
+    <section class="container" id="introduction">
         <h3 class="h3 text-center py-5 text-primary">
             <hr class="">
             <small class="text-muted">What is </small> SuperFood <small class="text-muted">?</small>
@@ -123,17 +125,86 @@
             of “superfoods”, such as quinoa or avocado, is having a growing environmental and social impact worldwide that is not being taken into consideration.
         </p>
     </section>
-    <div class="container-fluid" align="center">
-        <button class="btn btn-outline-primary">Read Articles-></button>
-    </div>
 
-    <br>
+
+    <section id="comparision">
+        <section class="container text-center ">
+            <div class="btn-group mb-4" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-light active"><a style="color: inherit;text-decoration: inherit;" href="#advantages">Advantages</a></button>
+                <button type="button" class="btn btn-dark"><a style="color: inherit;text-decoration: inherit;" href="#disadvantages">Disadvantages</a></button>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6 my-2">
+                    <div class="card">
+                        <div class="mx-2 card-body">
+                            <h5 class="card-title my-2 " id="advantages">Advantages</h5>
+                            <p class="text-muted">
+                                These have several health benefits
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <ol class="list-unstyled mb-0 px-4">
+                                <p class="my-3 fw-bold text-muted text-center">
+                                </p>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-success me-3"></i><small>Their high vitamin and mineral content can help your body ward off diseases and keep you healthier.</small>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-success me-3"></i><small>When incorporated into a well-balanced diet, these foods can promote heart health, weight loss, improve energy levels and even reduce the effects of aging.</small>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-success me-3"></i><small>Fiber, which is also found in many superfoods, can help prevent diabetes and digestive problems, while phytochemicals have numerous health benefits including reducing your risk of developing cardiovascular diseases.</small>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-check text-success me-3"></i><small>Superfoods are also known to protect your organs from toxins, help lower cholesterol, regulate metabolism and reduce inflammation.</small>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="card">
+                        <div class="mx-2 card-body">
+                            <h5 class="card-title my-2 " id="disadvantages">Disadvantages</h5>
+                            <p class="text-muted">
+                                Consumerism and exploitation
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <ol class="list-unstyled mb-0 px-4">
+                                <li class="mb-3">
+                                    <i class="fas fa-times text-danger me-3"></i><small>A downside of superfoods is that the title alone may cause people to focus on a few specific foods, blinding them to other equally nutritious options that aren’t as hyped. 
+                                    This can have negative effects on ecosystems.
+                                    </small>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-times text-danger me-3"></i><small>A downside of superfoods is that the title alone may cause people to focus on a few specific foods, blinding them to other equally nutritious options that aren’t as hyped. 
+                                    This can have negative effects on ecosystems.
+                                    </small>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-times text-danger me-3"></i><small>Taking avocado as an example, we can clearly see the imbalance in the supply chain. Michoacan in Mexico produces 5 out of 10 avocados produced globally. Intensive production has caused biodiversity loss, extreme weather conditions, extensive soil degradation and has even been associated with increased earthquakes in the area</small>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
     <!-- Footer -->
-    <footer class="page-footer font-small special-color-dark pt-4">
+    <footer class="page-footer font-small special-color-dark pt-4" id="footer">
 
         <!-- Footer Elements -->
-        <div class="container">
+        <div class="container" style="margin-top:10px;">
 
+            <div class="container-fluid" align="center">
+                <button class="btn btn-outline-primary">Read Articles-></button>
+            </div><br>
             <!-- Social buttons --><big>
             <ul class="list-unstyled list-inline text-center">
                 <li class="list-inline-item">
