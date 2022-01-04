@@ -30,7 +30,8 @@
             background: #c0e2df;
             position: relative;
             min-height: 400px;
-            overflow: hidden
+            overflow-x: hidden;
+            overflow-y: auto;
         }
         
         .wrapper .wrap {
@@ -41,7 +42,14 @@
         }
         
         #q2,
-        #q3 {
+        #q3,
+        #q4,
+        #q5,
+        #q6,
+        #q7,
+        #q8,
+        #q9,
+        #q10 {
             left: 650px
         }
         
@@ -252,98 +260,246 @@
     <br>
 
 
-    <section class="container-fluid">
+    <section class="container-fluid" id="quiz">
         <div class="wrapper">
             <div class="wrap" id="q1">
                 <div class="text-center pb-4">
-                    <div class="h5 font-weight-bold"><span id="number"> </span>1 of 3 </div>
+                    <div class="h5 font-weight-bold"><span id="number"> </span>1 of 10 </div>
                 </div>
-                <div class="h4 font-weight-bold">Which age group is suitable for superfoods? </div>
+                <div class="h4 font-weight-bold">What does the term superfood mean? </div>
                 <div class="pt-4">
                     <form>
-                        <label class="options"> infants and toddlers <input type="radio" name="radio"> <span class="checkmark"></span> 
-                        </label> <label class="options">adults <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-                        <label class="options"> All age groups <input type="radio" name="radio" id="rd"> <span class="checkmark"></span> </label>
+                        <label class="options"> foods that will be introduced in future <input type="radio" name="radio"> <span class="checkmark"></span> 
+                        </label> <label class="options">foods without nutritional value ie junk food <input type="radio" name="radio" checked> <span class="checkmark"></span> </label>
+                        <label class="options"> It is a marketing term used to describe healthy foods <input type="radio" name="radio" id="rd1" checked> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans1" style="height:0px;overflow:hidden;">
+                            [Option : C]
+                        </label>
                     </form>
                 </div>
-                <div class="d-flex justify-content-end pt-2">
-                    <button class="btn btn-primary" id="next1">Next <span class="fas fa-arrow-right"></span> </button>
+                <div class="row d-flex justify-content-end pt-2">
+                    <div class="d-flex justify-content-end pt-2 mx-3">
+                        <button class="btn btn-primary" onclick="check(1)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    </div>
+                    <div class="d-flex justify-content-end pt-2">
+                        <button class="btn btn-primary" onclick="next(1)">Next <span class="fas fa-arrow-right"></span> </button>
+                    </div>
                 </div>
             </div>
             <div class="wrap" id="q2">
                 <div class="text-center pb-4">
-                    <div class="h5 font-weight-bold"> <span id="number"> </span>2 of 3 </div>
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>2 of 10 </div>
                 </div>
-                <div class="h4 font-weight-bold"> 2. Which country exports most turmeric</div>
+                <div class="h4 font-weight-bold">Where did the term superfood first appear?</div>
                 <div class="pt-4">
-                    <form> <label class="options">America <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-                        <label class="options">India <input type="radio" name="radio" > <span class="checkmark"></span> </label>
-                        <label class="options">Australia <input type="radio" name="radio" id="rd"> <span class="checkmark"></span> </label>
+                    <form> <label class="options">The bestseller “superfoods Rx” <input id="rd2" type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label class="options">a magazine called “ healthy food daily” <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">tv program called food lovers <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans2" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
                     </form>
                 </div>
-                <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Previous </button> <button class="btn btn-primary" id="next2">Next <span class="fas fa-arrow-right"></span> </button> </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(2)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(2)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(2)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
             </div>
             <div class="wrap" id="q3">
                 <div class="text-center pb-4">
-                    <div class="h5 font-weight-bold"> <span id="number"> </span>3 of 3 </div>
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>3 of 10 </div>
                 </div>
-                <div class="h4 font-weight-bold"> 3. what does the term superfood mean?</div>
+                <div class="h4 font-weight-bold">Which country exports the most turmeric?</div>
                 <div class="pt-4">
-                    <form>
-                        <label class="options">foods that will be introduced in future <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-                        <label class="options">foods without nutritional value ie junk food <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-                        <label class="options">It is a marketing term used to describe healthy foods <input type="radio" name="radio" id="rd" > <span class="checkmark"></span> </label>
+                    <form> <label class="options">America <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label class="options">India <input type="radio" name="radio"  id="rd3"> <span class="checkmark"></span> </label>
+                        <label class="options">Australia <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans3" style="height:0px;overflow:hidden;">
+                            [Option : B]
+                        </label>
                     </form>
                 </div>
-                <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Previous </button> <button class="btn btn-primary" id="next3">Submit </button> </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(3)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(3)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(3)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q4">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>4 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">Used as an ingredient for potato chip substitute?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Kale <input type="radio" name="radio" id="rd4"> <span class="checkmark"></span> </label>
+                        <label class="options">lettuce <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">spinach <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans4" style="height:0px;overflow:hidden;">
+                            [Option : B]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(4)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(4)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(4)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q5">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>4 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">Which of these is a superfood?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">chips <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label class="options">Papaya  <input type="radio" name="radio"  id="rd5"> <span class="checkmark"></span> </label>
+                        <label class="options">sausages <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans4" style="height:0px;overflow:hidden;">
+                            [Option : B]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(5)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(5)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(5)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q6">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>6 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">Which of these edible seeds were widely cultivated by Aztecs in pre-Columbian times and was a staple in Mesoamerican cultures?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Chia seeds <input type="radio" name="radio" id="rd6"> <span class="checkmark"></span> </label>
+                        <label class="options">flax seeds <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">quinoa <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans6" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(4)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(4)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(4)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q7">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>7 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">This is an ornamental variety of which superfood?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Kale  <input type="radio" name="radio" id="rd7"> <span class="checkmark"></span> </label>
+                        <label class="options">cabbage <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">spinach <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans7" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(4)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(4)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(4)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q8">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>8 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">Which of these countries is the top exporter of avocados?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Mexico  <input type="radio" name="radio" id="rd8"> <span class="checkmark"></span> </label>
+                        <label class="options">Peru <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">Argentina <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans8" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(4)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(4)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(4)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q9">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>9 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">The dye of which common Superfood was used in Classical Rome and Medieval Europe for dying hair?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Walnut  <input type="radio" name="radio" id="rd9"> <span class="checkmark"></span> </label>
+                        <label class="options">almonds <input type="radio" name="radio" > <span class="checkmark"></span> </label>
+                        <label class="options">peanuts <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans9" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary" onclick="back(4)"> <span class="fas fa-arrow-left pr-1"></span>Previous </button>
+                    <button class="btn btn-primary mx-2" onclick="check(4)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                    <button class="btn btn-primary" onclick="next(4)">Next <span class="fas fa-arrow-right"></span> </button>
+                </div>
+            </div>
+            <div class="wrap" id="q10">
+                <div class="text-center pb-4">
+                    <div class="h5 font-weight-bold"> <span id="number"> </span>10 of 10</div>
+                </div>
+                <div class="h4 font-weight-bold">Which of these were used to make durable ink for writing and drawing, and are thought to have been used by Leonardo da Vinci and Rembrandt?</div>
+                <div class="pt-4">
+                    <form>
+                        <label class="options">Walnut<input type="radio" name="radio" id="rd10" > <span class="checkmark"></span> </label>
+                        <label class="options">almonds<input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label class="options">peanuts<input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                        <label role="alert" id="ans10" style="height:0px;overflow:hidden;">
+                            [Option : A]
+                        </label>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-end pt-2">
+                    <button class="btn btn-primary mx-3" onclick="back(10)"> <span class="fas fa-arrow-left pr-2"></span>Previous </button>
+                    <button class="btn btn-primary" id="check3" onclick="check(10)">Check <i class="fa fa-check-circle" aria-hidden="true"></i> </button>
+                </div>
             </div>
         </div>
         <script>
-            var q1 = document.getElementById("q1");
-            var q2 = document.getElementById("q2");
-            var q3 = document.getElementById("q3");
-            var next1 = document.getElementById('next1')
-            var back1 = document.getElementById('back1')
-            var next2 = document.getElementById('next2')
-            var back2 = document.getElementById('back2')
-            document.addEventListener('DOMContentLoaded', function() {
-                let query = window.matchMedia("(max-width: 767px)");
-                if (query.matches) {
-                    next1.onclick = function() {
-                        q1.style.left = "-650px";
-                        q2.style.left = "15px";
-                    }
-                    back1.onclick = function() {
-                        q1.style.left = "15px";
-                        q2.style.left = "650px";
-                    }
-                    back2.onclick = function() {
-                        q2.style.left = "15px";
-                        q3.style.left = "650px";
-                    }
-                    next2.onclick = function() {
-                        q2.style.left = "-650px";
-                        q3.style.left = "15px";
-                    }
+            function next(n) {
+                var q = document.getElementById("q" + n);
+                var next = document.getElementById("q" + (n + 1));
+                q.style.left = "-650px";
+                next.style.left = "15px";
+            }
+
+            function back(n) {
+                var prev = document.getElementById("q" + (n - 1));
+                var q = document.getElementById("q" + n);
+                prev.style.left = "15px";
+                q.style.left = "650px";
+            }
+
+            function check(n) {
+                var ans = document.getElementById("ans" + n);
+                var rightAns = document.getElementById("rd" + n).checked;
+                ans.style.height = "auto";
+                if (rightAns) {
+                    ans.style.backgroundColor = "rgb(144,238,144)"
                 } else {
-                    next1.onclick = function() {
-                        q1.style.left = "-650px";
-                        q2.style.left = "50px";
-                    }
-                    back1.onclick = function() {
-                        q1.style.left = "50px";
-                        q2.style.left = "650px";
-                    }
-                    back2.onclick = function() {
-                        q2.style.left = "50px";
-                        q3.style.left = "650px";
-                    }
-                    next2.onclick = function() {
-                        q2.style.left = "-650px";
-                        q3.style.left = "50px";
-                    }
+                    ans.style.backgroundColor = "rgb(205,92,92)"
                 }
-            });
+            }
+
+
 
             function uncheck() {
                 var rad = document.getElementById('rd')
