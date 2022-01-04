@@ -57,22 +57,22 @@
 
     <section class="container" id="publishedForm">
         <h3 class="h3 py-5 text-primary"><small><small class="text-muted ">Are we missing something?</small></small><br>Share Your Findings</h3>
-        <form>
+        <form action="https://formspree.io/f/mwkyprry" method="post" enctype="multipart/form-data" target="_blank">
             <div class="row">
                 <div class="form-group col-md-5">
                     <label for="exampleInputName">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Name" name="name">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="_replyto">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-10">
-                    <label for="exampleFormControlFile1">Upload Document</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <label for="exampleFormControlTextarea1">Write Your findings here.</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" onclick="showAlert()">Submit</button>
@@ -131,7 +131,7 @@
 
     <script>
         function showAlert() {
-            $('#alert').innerHTML = '<div class="alert alert-success my-5 " role="alert"><b>Success<br></b>We will reach out to you soon. Make sure your check your email.</div>'
+            document.getElementById('alert').innerHTML = '<div class="alert alert-success my-5 " role="alert"><b>Success<br></b>We will reach out to you soon. Make sure your check your email.</div>'
         }
     </script>
     <!-- Optional JavaScript -->
